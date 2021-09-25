@@ -19,11 +19,15 @@ main {
   font-size: 18px;
   text-align: justify;
   font-family: "Volte Medium";
+  column-count: 1;
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
 }
 
 main img {
   width: 100%;
 }
+
 @media (min-width: 1200px) {
   main img {
     width: auto;
