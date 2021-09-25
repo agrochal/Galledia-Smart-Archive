@@ -18,6 +18,7 @@ main {
   margin-top: 30px;
   font-size: 18px;
   text-align: justify;
+  font-family: "Volte Medium";
 }
 
 main img {
@@ -37,6 +38,7 @@ main img {
   main {
     width: 60%;
     font-size:19px;
+    margin-bottom:80px;
   }
 
   main img {
@@ -53,4 +55,8 @@ main img {
     float: right;
     margin-left: 8px;
   }
+  /*main img:first-child{
+    float: left;
+    margin-right: 8px;
+  }*/
 }
