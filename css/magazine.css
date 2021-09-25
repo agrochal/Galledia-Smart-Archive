@@ -1,0 +1,53 @@
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  justify-content: center;
+}
+
+#h_edition {
+  font-family: 'Volte Medium' !important;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+#edition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+#edition img {
+  width: 290px;
+}
+
+#articles_edition {
+  padding: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#articles_section article {
+  padding-right: 10px;
+}
+
+article {
+  width: 500px;
+}
+
+@media (min-width: 1400px) {
+  #wrapper {
+    flex-direction: row;
+  }
+
+  #articles_edition {
+    height: 400px;
+  }
+}

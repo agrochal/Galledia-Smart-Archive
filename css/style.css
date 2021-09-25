@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  padding: 35px;
+  padding: 30px;
   margin-bottom: 20px;
   position: fixed;
   top: 0;
@@ -33,7 +33,7 @@ header {
 }
 
 header img {
-  width: 70px;
+  width: 65px;
   transition: all .15s linear;
 }
 
@@ -58,7 +58,7 @@ h2 {
 }
 
 .space {
-  margin-bottom: 175px;
+  margin-bottom: 155px;
 }
 
 a {

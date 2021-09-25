@@ -9,7 +9,7 @@ function growShrinkLogo() {
     logo.style.width = '37px';
     header.style.padding = '17px';
   } else {
-    logo.style.width = '70px';
-    header.style.padding = '35px';
+    logo.style.width = '65px';
+    header.style.padding = '30px';
   }
 }
