@@ -25,6 +25,9 @@ main img {
   width: 100%;
 }
 @media (min-width: 900px) {
+  main img {
+    width: auto;
+  }
   main{
     column-count: 3;
     -moz-column-count: 3;
