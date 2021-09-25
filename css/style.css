@@ -52,3 +52,7 @@ h2 {
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.space{
+  margin-bottom: 140px;
+}

@@ -1,0 +1,56 @@
+h1 {
+  font-size: 42px;
+}
+
+h3 {
+  font-family: "Volte Medium";
+  font-style: normal;
+  margin: auto;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+  margin-top: 5px;
+}
+
+main {
+  width: 75%;
+  margin: auto;
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+main img {
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 52px;
+  }
+
+  h3{
+    font-size:20px;
+    margin-top:12px;
+  }
+
+  main {
+    width: 60%;
+    font-size:19px;
+  }
+
+  main img {
+    margin: 3px;
+    width: 300px;
+  }
+
+  main img:nth-child(odd) {
+    float: left;
+    margin-right: 8px;
+  }
+
+  main img:nth-child(even) {
+    float: right;
+    margin-left: 8px;
+  }
+}
