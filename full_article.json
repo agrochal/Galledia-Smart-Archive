@@ -6,15 +6,20 @@
   "article_text": "Full text",
   "images": [{
       "image": {
-        "image_path": "some-id-of-the-image",
-        "size": 1000
+        "image_path": "image1.jpg",
+        "size": 50267
       }
     },
     {
       "image": {
-        "image_path": "some-id-of-the-image",
-        "size": 1000
-      }
+        "image_path": "image2.jpg",
+        "size": 6997568
+      },
+      {
+        "image": {
+          "image_path": "image3.jpg",
+          "size": 326900
+        }
     }
   ]
 }
