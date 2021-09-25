@@ -56,3 +56,8 @@ h2 {
 .space{
   margin-bottom: 140px;
 }
+
+a{
+  text-decoration: none;
+  color:black;
+}
