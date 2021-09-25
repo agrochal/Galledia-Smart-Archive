@@ -4,8 +4,17 @@
   "publishment_date": "12.12.2012",
   "magazine_edition": "XYZ",
   "article_text": "Full text",
-  "images": [
-    {"image": "some-id-of-the-image"},
-    {"image": "some-id-of-the-image"}
+  "images": [{
+      "image": {
+        "image_path": "some-id-of-the-image",
+        "size": 1000
+      }
+    },
+    {
+      "image": {
+        "image_path": "some-id-of-the-image",
+        "size": 1000
+      }
+    }
   ]
 }

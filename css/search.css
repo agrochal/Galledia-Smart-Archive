@@ -114,12 +114,12 @@ article {
 
 .magazine_name{
   font-size:14px;
-  color:#5c5c5c;
+  color:#5c5c5c !important;
   font-family: 'Volte Semibold';
 }
 
 .magazine_name:hover{
-  color: #E61C52;
+  color: #E61C52 !important;
   cursor: pointer;
 }
 
