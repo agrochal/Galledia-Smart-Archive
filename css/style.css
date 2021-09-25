@@ -16,179 +16,191 @@
 body {
   background-color: #FFFFFF;
   overflow-x: hidden;
-  font-family:'Volte Regular';
-  font-weight:normal;
+  font-family: 'Volte Regular';
+  font-weight: normal;
   width: 100vw;
 }
 
-header{
-  padding:40px;
-  margin-bottom:20px;
+header {
+  padding: 40px;
+  margin-bottom: 20px;
 }
 
-header img{
+header img {
   width: 80px;
 }
 
-h1{
-  font-family:"VolteRounded-Bold" !important;
-  text-align:center;
-  font-size:65px;
+h1 {
+  font-family: "VolteRounded-Bold" !important;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  font-size: 65px;
 }
 
-form{
-  height:60px;
+form {
+  height: 60px;
   display: grid;
   grid-template-columns: 90fr 20fr;
   grid-template-rows: auto;
   gap: 0px 0px;
   grid-template-areas:
     ". .";
-    width:100%;
-    margin:auto;
-    margin-top:28px;
+  width: 100%;
+  margin: auto;
+  margin-top: 28px;
 }
 
-form input:not([type="submit"]){
-  border:none;
-  border-radius:10px 0px 0px 10px;
+form input:not([type="submit"]) {
+  border: none;
+  border-radius: 10px 0px 0px 10px;
   background-color: #E9E9E9;
   color: black;
   font-size: 24px;
   padding: 10px;
-  font-family:'Volte Medium';
+  font-family: 'Volte Medium';
 }
 
-form input[type="submit"]{
+form input[type="submit"] {
   -webkit-appearance: none;
   border: 0px solid black;
-  border-radius:0px 10px 10px 0px;
-  font-size:26px;
+  border-radius: 0px 10px 10px 0px;
+  font-size: 26px;
   padding: 10px;
-  font-family:'Volte Semibold';
+  font-family: 'Volte Semibold';
   background-color: #E61C52;
   color: white;
 }
 
-
-form input[type="submit"]:hover{
-  cursor:pointer;
+form input[type="submit"]:hover {
+  cursor: pointer;
   background-color: #000000;
 }
 
-main{
-  width:80%;
-  margin:auto;
-  padding:15px;
+main {
+  width: 80%;
+  margin: auto;
+  padding: 15px;
 }
 
-h2{
-  font-family:"VolteRounded-Bold" !important;
-  font-style:normal;
-  font-size:50px;
-  text-align:left;
-  margin-top:40px;
+h2 {
+  font-family: "VolteRounded-Bold" !important;
+  font-style: normal;
+  font-size: 50px;
+  text-align: left;
+  margin-top: 40px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #sorting {
-  font-family:'Volte Medium';
-  font-style:normal;
-  font-size:27px;
-  margin-top:8px;
-  padding:5px;
+  font-family: 'Volte Medium';
+  font-style: normal;
+  font-size: 27px;
+  margin-top: 8px;
+  padding: 5px;
 }
 
-#sorting select{
-  padding:5px;
-  font-size:23px;
+#sorting select {
+  padding: 5px;
+  font-size: 23px;
 }
 
-#sorting option{
-  font-size:14px;
+#sorting option {
+  font-size: 14px;
 }
 
-main > section > article {
-  margin-right:auto;
+main>section>article {
+  margin-right: auto;
 }
 
-main > section{
-  padding-top:40px;
+main>section {
+  padding-top: 40px;
 }
 
-article{
-  width:750px;
-  margin-bottom:40px;
+article {
+  width: 750px;
+  margin-bottom: 40px;
 }
 
-.article_date{
-  font-family:'Volte Medium';
-  font-style:normal;
-  font-size:18px;
-  color:#161616;
+.article_date {
+  font-family: 'Volte Medium';
+  font-style: normal;
+  font-size: 18px;
+  color: #161616;
 }
 
-.article_title{
-  font-family:'Volte SemiBold';
-  font-style:normal;
-  font-size:27px;
+.article_title {
+  font-family: 'Volte SemiBold';
+  font-style: normal;
+  font-size: 27px;
 }
 
-.article_text{
-  font-family:'Volte Regular';
-  font-style:normal;
-  font-size:16px;
+.article_text {
+  font-family: 'Volte Regular';
+  font-style: normal;
+  font-size: 16px;
 }
 
-.article_button{
+.article_button {
   background-color: #E61C52;
   color: #FFFFFF;
-  border-radius:15px;
-  padding:8px 12px 8px 12px;
-  display:inline-block;
-  font-size:27px;
+  border-radius: 15px;
+  padding: 8px 12px 8px 12px;
+  display: inline-block;
+  font-size: 27px;
   margin-top: 8px;
 }
 
 @media (min-width: 1400px) {
-  main > section{
-    flex-wrap:wrap;
-    display:flex;
-  }
-  main > section > article{
-    width:450px;
-  }
-  h1{
-    font-size:57px;
-  }
-  form{
-    height:50px;
-  }
-  main{
-    width:65%;
-  }
-  form input:not([type="submit"]){
-    font-size:21px;
+  main>section {
+    flex-wrap: wrap;
+    display: flex;
   }
 
-  form input[type="submit"]{
-    font-size:24px;
+  main>section>article {
+    width: 450px;
   }
-  h2{
-    font-size:43px;
+
+  h1 {
+    font-size: 57px;
   }
+
+  form {
+    height: 50px;
+  }
+
+  main {
+    width: 65%;
+  }
+
+  form input:not([type="submit"]) {
+    font-size: 21px;
+  }
+
+  form input[type="submit"] {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 43px;
+  }
+
   #sorting {
-    font-size:23px;
+    font-size: 23px;
   }
 
-  #sorting select{
-    font-size:20px;
+  #sorting select {
+    font-size: 20px;
   }
 
-  #sorting option{
-    font-size:15px;
+  #sorting option {
+    font-size: 15px;
   }
 
-  .article_button{
-    font-size:15px;
+  .article_button {
+    font-size: 15px;
   }
 }
