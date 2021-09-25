@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+body {
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  font-family:'Volte Regular';
+  font-weight:normal;
+  width: 100vw;
+}
+
+header{
+  padding:40px;
+  margin-bottom:20px;
+}
+
+header img{
+  width: 80px;
+}
+
+h1{
+  font-family:"VolteRounded-Bold" !important;
+  text-align:center;
+  font-size:65px;
+}
+
+form{
+  height:60px;
+  display: grid;
+  grid-template-columns: 90fr 20fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". .";
+    width:100%;
+    margin:auto;
+    margin-top:28px;
+}
+
+form input:not([type="submit"]){
+  border:none;
+  border-radius:10px 0px 0px 10px;
+  background-color: #E9E9E9;
+  color: black;
+  font-size: 24px;
+  padding: 10px;
+  font-family:'Volte Medium';
+}
+
+form input[type="submit"]{
+  -webkit-appearance: none;
+  border: 0px solid black;
+  border-radius:0px 10px 10px 0px;
+  font-size:26px;
+  padding: 10px;
+  font-family:'Volte Semibold';
+  background-color: #E61C52;
+  color: white;
+}
+
+
+form input[type="submit"]:hover{
+  cursor:pointer;
+  background-color: #000000;
+}
+
+main{
+  width:80%;
+  margin:auto;
+  padding:15px;
+}
+
+h2{
+  font-family:"VolteRounded-Bold" !important;
+  font-style:normal;
+  font-size:50px;
+  text-align:left;
+  margin-top:40px;
+}
+
+#sorting {
+  font-family:'Volte Medium';
+  font-style:normal;
+  font-size:27px;
+  margin-top:8px;
+  padding:5px;
+}
+
+#sorting select{
+  padding:5px;
+  font-size:23px;
+}
+
+#sorting option{
+  font-size:14px;
+}
+
+main > section > article {
+  margin-right:auto;
+}
+
+main > section{
+  padding-top:40px;
+  flex-wrap:wrap;
+}
+
+article{
+  width:750px;
+  margin-bottom:40px;
+}
+
+.article_date{
+  font-family:'Volte Medium';
+  font-style:normal;
+  font-size:18px;
+  color:#161616;
+}
+
+.article_title{
+  font-family:'Volte SemiBold';
+  font-style:normal;
+  font-size:27px;
+}
+
+.article_text{
+  font-family:'Volte Regular';
+  font-style:normal;
+  font-size:16px;
+}
+
+.article_button{
+  background-color: #E61C52;
+  color: #FFFFFF;
+  border-radius:15px;
+  padding:8px 12px 8px 12px;
+  display:inline-block;
+  font-size:27px;
+  margin-top: 8px;
+}
