@@ -37,6 +37,15 @@ form input[type="submit"]:hover {
   background-color: #000000;
 }
 
+#under_text{
+  font-size:27px;
+  margin:auto;
+  text-align:center;
+  font-family: 'Volte Medium';
+  margin-top:20px;
+  color:#555;
+}
+
 main {
   width: 80%;
   margin: auto;
@@ -124,6 +133,9 @@ article {
 }
 
 @media (min-width: 1400px) {
+  #under_text{
+    font-size:17px;
+  }
   main>section {
     flex-wrap: wrap;
     display: flex;
