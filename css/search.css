@@ -53,6 +53,7 @@ main {
 }
 
 #sorting {
+  display:none;
   font-family: 'Volte Medium';
   font-style: normal;
   font-size: 27px;

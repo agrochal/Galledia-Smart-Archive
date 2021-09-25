@@ -26,15 +26,17 @@ if (!isNaN(article)) {
 async function getArticle(id) {
 
   const json = await fetch(`http://20.203.135.4:8000/article/${id}/`);
-  if(json["status"]!=200) window.location.href = "index.html";
+  if(json["status"]!=200||json==null) window.location.href = "index.html";
   const article = await json.json();
 
   const title = article["title_article"];
   const text = article["article_text"];
   const magazine_edition = article["magazine_edition"];
   const publishment_date = new Date(article["publishment_date"]);
-  const images = article["images"];
-  //const images = [["image1.jpg",50267], ["image2.jpg",6997568], ["image3.jpg",326900]];
+  const images = [];
+  for(let i=0;i<article["images"].length;i++){
+    images.push([article["images"][i]["image"]["image_path"],article["images"][i]["image"]["size"]]);
+  }
   const days = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
 
   if(title==""||title==null) window.location.href = "index.html";
