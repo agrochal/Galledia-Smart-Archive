@@ -37,6 +37,10 @@ form input[type="submit"]:hover {
   background-color: #000000;
 }
 
+h1{
+  margin-top: 140px;
+}
+
 main {
   width: 80%;
   margin: auto;
@@ -76,8 +80,8 @@ article {
 .article_date {
   font-family: 'Volte Medium';
   font-style: normal;
-  font-size: 18px;
-  color: #161616;
+  font-size: 17px;
+  color: #333333;
 }
 
 .article_title {
@@ -90,6 +94,7 @@ article {
   font-family: 'Volte Regular';
   font-style: normal;
   font-size: 16px;
+  color:#161616;
 }
 
 .article_button {
@@ -107,6 +112,17 @@ article {
 }
 
 .article_title:hover {
+  color: #E61C52;
+  cursor: pointer;
+}
+
+.magazine_name{
+  font-size:14px;
+  color:#5c5c5c;
+  font-family: 'Volte Semibold';
+}
+
+.magazine_name:hover{
   color: #E61C52;
   cursor: pointer;
 }
@@ -155,6 +171,14 @@ article {
 
   #sorting option {
     font-size: 15px;
+  }
+
+  .magazine_name{
+    font-size:17px;
+  }
+
+  .article_date{
+    font-size:19px;
   }
 
   .article_button {
