@@ -24,10 +24,10 @@ if (!isNaN(article)) {
 }
 
 async function getArticle(id) {
-
+  if (location.protocol === 'https:') {
+    location.replace(`http:${location.href.substring(location.protocol.length)}`);
+  }
   const json = await fetch(`http://20.203.135.4:8000/article/${id}/`);
-    console.log("T");
-    console.log(json);
   if(json["status"]!=200||json==null) window.location.href = "index.html";
   const article = await json.json();
 
