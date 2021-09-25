@@ -30,33 +30,22 @@ main img {
     font-size: 52px;
   }
 
-  h3{
-    font-size:20px;
-    margin-top:12px;
+  h3 {
+    font-size: 20px;
+    margin-top: 12px;
   }
 
   main {
     width: 60%;
-    font-size:19px;
-    margin-bottom:80px;
+    font-size: 19px;
+    margin-bottom: 80px;
+    column-count: 3;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
   }
 
   main img {
     margin: 3px;
     width: 300px;
   }
-
-  main img:nth-child(odd) {
-    float: left;
-    margin-right: 8px;
-  }
-
-  main img:nth-child(even) {
-    float: right;
-    margin-left: 8px;
-  }
-  /*main img:first-child{
-    float: left;
-    margin-right: 8px;
-  }*/
 }
