@@ -22,15 +22,19 @@ body {
 }
 
 header {
-  padding: 40px;
+  padding: 35px;
   margin-bottom: 20px;
   position: fixed;
   top: 0;
   left: 0;
+  background-color:white;
+  width:100%;
+  transition: all .15s linear;
 }
 
 header img {
-  width: 75px;
+  width: 70px;
+  transition: all .15s linear;
 }
 
 h1 {
