@@ -24,7 +24,7 @@ main {
 main img {
   width: 100%;
 }
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   main img {
     width: auto;
   }
@@ -53,6 +53,5 @@ main img {
 
   main img {
     margin: 3px;
-    width: 300px;
   }
 }
