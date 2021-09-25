@@ -24,6 +24,13 @@ main {
 main img {
   width: 100%;
 }
+@media (min-width: 900px) {
+  main{
+    column-count: 3;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+  }
+}
 
 @media (min-width: 1400px) {
   h1 {
@@ -39,9 +46,6 @@ main img {
     width: 60%;
     font-size: 19px;
     margin-bottom: 80px;
-    column-count: 3;
-    -moz-column-count: 3;
-    -webkit-column-count: 3;
   }
 
   main img {
