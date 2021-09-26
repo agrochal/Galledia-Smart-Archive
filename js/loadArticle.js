@@ -39,7 +39,7 @@ async function getArticle(id) {
   for(let i=0;i<article["images"].length;i++){
     images.push([article["images"][i]["image"]["image_path"],article["images"][i]["image"]["size"]]);
   }
-  const days = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
   if(title==""||title==null) window.location.href = "index.html";
   if(text==""||text==null) window.location.href = "index.html";
