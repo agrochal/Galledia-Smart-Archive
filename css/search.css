@@ -194,3 +194,14 @@ article {
     font-size: 15px;
   }
 }
+
+.splide{
+  margin:auto;
+  margin-top:40px;
+  width:70%;
+}
+
+.splide__slide img {
+	width : 100%;
+	height: auto;
+}

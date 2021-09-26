@@ -1,24 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>charpie</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/search.css">
-    <link rel="stylesheet" type="text/css" href="fonts/style.css">
-  </head>
-  <body class="preload">
-    <div class="space" style="margin-top:250px"></div>
-    <header><a href="index.html"><img id="Logo" src="assets/Galledia_Logo.svg"></a></header>
-    <h1>charpie</h1>
-    <main>
-      <form method="GET" action="search.html">
-        <input id="search" type="text" name="search">
-        <input type="submit" value="Search">
-      </form>
-      <p id="under_text">Currently indexed 42069 magazines editions.</p>
-    </main>
-    <script src="js/logo.js"></script>
-    <script src="js/preload.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>charpie</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/search.css">
+  <link rel="stylesheet" type="text/css" href="fonts/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+</head>
+
+<body class="preload">
+  <div class="space" style="margin-top:140px"></div>
+  <header><a href="index.html"><img id="Logo" src="assets/Galledia_Logo.svg"></a></header>
+  <h1 style="font-size:70px;">charpie</h1>
+  <main>
+    <form method="GET" action="search.html">
+      <input id="search" type="text" name="search">
+      <input type="submit" value="Search">
+    </form>
+    <p id="under_text">Currently indexed 42069 magazines editions.</p>
+    <div id="image-slider" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="assets/1.jpg">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/2.jpg">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/3.jpg">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/4.jpg">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/5.jpg">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/6.jpg">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/7.jpg">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/8.jpg">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script>
+    new Splide('.splide', {
+      type: 'loop',
+      perPage: 5,
+      gap: 10,
+      perMove: 1,
+      autoplay: true,
+      speed: 1200,
+      interval: 1000,
+    }).mount();
+  </script>
+  <script src="js/logo.js"></script>
+  <script src="js/preload.js"></script>
+</body>
+
 </html>
