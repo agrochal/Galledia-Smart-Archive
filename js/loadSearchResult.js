@@ -74,15 +74,16 @@ async function generateHTML(results, page) {
 
     let article_title = document.createElement("a");
     article_title.classList.add("article_title");
-    article_title.href = `article.html?article=${article_id}`;;
+    article_title.href = `article.html?article=${article_id}`;
     article_title.textContent = article_val;
 
     let article_text = document.createElement("div");
     article_text.classList.add("article_text");
     article_text.textContent = text_val;
 
-    let article_button = document.createElement("div");
+    let article_button = document.createElement("a");
     article_button.classList.add("article_button");
+    article_button.href = `article.html?article=${article_id}`;
     article_button.textContent = "Read more";
 
     article.appendChild(date);

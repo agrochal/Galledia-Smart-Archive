@@ -22,9 +22,14 @@ async function getMagazine(magazine){
   const articles_edition = document.getElementById("articles_edition");
   for(let i=0;i<results.length;i++){
     const date_val = new Date(results[i]["fields"]["published_date"]);
-    const article_val = results[i]["fields"]["title"];
+    let article_val = results[i]["fields"]["title"];
     const article_id = results[i]["fields"]["article_id"];
-    const text_val = results[i]["fields"]["content"].slice(0,140) + "...";
+    const text_val = results[i]["fields"]["content"].slice(0,140).trim() + "...";
+
+    if(article_val.length>28){
+      article_val = article_val.slice(0,26).trim();
+      article_val += "...";
+    }
 
     let article = document.createElement("article");
 
