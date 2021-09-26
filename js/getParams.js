@@ -25,7 +25,7 @@ function getAllUrlParams(url) {
 
       // (optional) keep case consistent
       paramName = paramName.toLowerCase();
-      if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+      /*if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();*/
 
       // if the paramName ends with square brackets, e.g. colors[] or colors[2]
       if (paramName.match(/\[(\d+)?\]$/)) {

@@ -1,32 +1,54 @@
 const parameters = getAllUrlParams(window.location.href);
 
 const search_phrase = parameters["search"].replace(/[\u00A0-\u9999<>\&]/g, function(i) {
-   return '&#'+i.charCodeAt(0)+';';
+  return '&#' + i.charCodeAt(0) + ';';
 });
 
-  if(search_phrase!=""&&search_phrase!=null){
-    document.getElementById('search').value = search_phrase;
-    document.getElementById('sorting').style.display = "block";
-  }
+let sort_mode = parameters["sort"];
 
-async function getSearchResults(search_phrase){
+if (sort_mode != 1) {
+  sort_mode = 0;
+}
+
+document.getElementById('sort').value = sort_mode;
+
+if (search_phrase != "" && search_phrase != null) {
+  document.getElementById('search').value = search_phrase;
+  document.getElementById('sorting').style.display = "block";
+}
+
+async function getSearchResults(search_phrase) {
   if (location.protocol === 'https:') {
     location.replace(`http:${location.href.substring(location.protocol.length)}`);
   }
   const json = await fetch(`http://20.203.135.4:8000/search/${search_phrase}/`);
-  if(json["status"]!=200||json==null) window.location.href = "index.html";
+  if (json["status"] != 200 || json == null) window.location.href = "index.html";
   const results = await json.json();
-
-  const articles_section = document.getElementById("articles_section");
-  for(let i=0;i<results.length;i++){
-    const mini_query = await fetch(`http://20.203.135.4:8000/article/0/`);
+  /*for(let i=0;i<results.length;i++){
+    const mini_query = await fetch(`http://20.203.135.4:8000/article/${i}/`); //TEMPORARY
     if(mini_query["status"]!=200||mini_query==null) window.location.href = "index.html";
     const article_info = await mini_query.json();
-    const date_val = new Date(article_info["publishment_date"]);
+    results[i]["publishment_date"] = article_info["publishment_date"];
+  }*/
+  if (sort_mode == 0) {
+    results.sort((a, b) => parseFloat(b.Date) - parseFloat(a.Date));
+  } else if (sort_mode == 1) {
+    results.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
+  }
+  generateHTML(results);
+
+}
+
+getSearchResults(search_phrase);
+
+async function generateHTML(results) {
+  const articles_section = document.getElementById("articles_section");
+  for (let i = 0; i < results.length; i++) {
+    const date_val = new Date(results[i]["Date"]);
     const magazine_val = results[i]["Magazine_edition"];
     const article_val = results[i]["Title"];
     const article_id = results[i]["Article_id"];
-    const text_val = results[i]["Textdata"].slice(0,140) + "...";
+    const text_val = results[i]["Textdata"].slice(0, 140) + "...";
 
     let article = document.createElement("article");
 
@@ -61,4 +83,8 @@ async function getSearchResults(search_phrase){
   }
 }
 
-getSearchResults(search_phrase);
+function sortResults() {
+  const sort_mode = document.getElementById("sort").value;
+  const search_phrase = document.getElementById('search').value;
+  window.location.href = `${location.protocol}//${location.host}${location.pathname}?search=${search_phrase}&sort=${sort_mode}`;
+}

@@ -49,7 +49,7 @@ async function getArticle(id) {
   document.getElementsByTagName('h1')[0].textContent = title;
   document.getElementsByTagName('h3')[0].textContent = `${days[publishment_date.getDay()]}, ${publishment_date.getDate()}.${publishment_date.getMonth()+1}.${publishment_date.getFullYear()}`;
   document.getElementsByTagName('h3')[1].getElementsByTagName('a')[0].textContent = magazine_edition;
-  document.getElementsByTagName('h3')[1].getElementsByTagName('a')[0].href = `magazine_edition.html?${magazine_edition}`
+  document.getElementsByTagName('h3')[1].getElementsByTagName('a')[0].href = `magazine_edition.html?magazine=${magazine_edition}`
   document.getElementById('text').textContent = text;
 
   if(images.length>0){

@@ -19,9 +19,9 @@
     <h2>Results:</h2>
     <div id="sorting">
     <label for="sort">Sort by:</label>
-    <select id="sort" name="sort">
-      <option>Latest</option>
-      <option>Relevance</option>
+    <select id="sort" name="sort" onchange="sortResults()">
+      <option value="0">Latest</option>
+      <option value="1">Relevance</option>
       </select>
       </div>
       <section id="articles_section">
