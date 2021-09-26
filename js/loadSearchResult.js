@@ -10,6 +10,12 @@ if (sort_mode != 1) {
   sort_mode = 0;
 }
 
+let page = parameters["page"];
+
+if(page==null||isNaN(page)){
+  page = 1;
+}
+
 document.getElementById('sort').value = sort_mode;
 
 if (search_phrase != "" && search_phrase != null) {
@@ -17,7 +23,7 @@ if (search_phrase != "" && search_phrase != null) {
   document.getElementById('sorting').style.display = "block";
 }
 
-async function getSearchResults(search_phrase) {
+async function getSearchResults(search_phrase, page) {
   if (location.protocol === 'https:') {
     location.replace(`http:${location.href.substring(location.protocol.length)}`);
   }
@@ -35,20 +41,25 @@ async function getSearchResults(search_phrase) {
   } else if (sort_mode == 1) {
     results.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
   }
-  generateHTML(results);
+  generateHTML(results, page);
 
 }
 
-getSearchResults(search_phrase);
+getSearchResults(search_phrase,page);
 
-async function generateHTML(results) {
+async function generateHTML(results, page) {
   const articles_section = document.getElementById("articles_section");
-  for (let i = 0; i < results.length; i++) {
+  for (let i = 0; i < Math.min(results.length,10); i++) {
     const date_val = new Date(results[i]["Date"]);
     const magazine_val = results[i]["Magazine_edition"];
-    const article_val = results[i]["Title"];
+    let article_val = results[i]["Title"];
     const article_id = results[i]["Article_id"];
-    const text_val = results[i]["Textdata"].slice(0, 140) + "...";
+    const text_val = results[i]["Textdata"].slice(0, 140).trim() + "...";
+
+    if(article_val.length>28){
+      article_val = article_val.slice(0,26).trim();
+      article_val += "...";
+    }
 
     let article = document.createElement("article");
 
