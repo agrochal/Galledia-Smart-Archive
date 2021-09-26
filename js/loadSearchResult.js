@@ -49,7 +49,7 @@ getSearchResults(search_phrase,page);
 
 async function generateHTML(results, page) {
   const articles_section = document.getElementById("articles_section");
-  for (let i = 0; i < Math.min(results.length,10); i++) {
+  for (let i = 0; i < results.length; i++) {
     const date_val = new Date(results[i]["Date"]);
     const magazine_val = results[i]["Magazine_edition"];
     let article_val = results[i]["Title"];
